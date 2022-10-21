@@ -31,8 +31,8 @@ The datasets are available to be downloaded at UK government website [here](http
 * **Set up .env and .yaml file**
   * Create .env and .yaml files:
 
-  ![envsetup](/Asset/envsetup.jpg)
-  ![yamlareacodes](/Asset/yamlareacodes.jpg)
+  ![envsetup](/Asset/envsetup.JPG)
+  ![yamlareacodes](/Asset/yamlareacodes.JPG)
 
 
 
