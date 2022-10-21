@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}} - UK Electricity Consumption</title>
+        <meta charset="utf-8" />
+        <title>DB graph builder</title>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+        <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+        <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+        <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+    </head>
+    <body>
+        <h1>Please select your area code</h1>
+                        <form action = "http://127.0.0.1:7777/query" method="POST">
+                            <div class="mui">   
+                                    <div class="col">
+                                    <label> {{ form.city_areacode.label }} </label>
+                                    <select name="select" id = "select">
+                                        <option value="0">---</option>
+                                        {% for select in areacode %}
+                                        <option value="{{select.data}}">{{select.data}}</option>
+                                        {% endfor %}
+                                    </select>
+                                    </div>
+                                <div class="col-md-4"><input type = "submit" value = "submit" /></div>
+                            </div> 
+                        </form>
+</html>
+{% endblock %}

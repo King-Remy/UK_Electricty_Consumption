@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!doctype html>
+<html>
+    <head>
+      <meta charset="utf-8" />
+      <title>DB graph builder</title>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+      <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+      <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+      <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    </head>
+    <body>
+          {{ fig|safe }}
+          <table id="data" class="table table-striped">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>Areacode</th>
+                <th>Postcode</th>
+                <th>Mean_consumption</th>
+                <th>Median_consumption</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+    </body>
+</html>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        ajax: '/input/query/',
+        serverSide: true,
+        columns: [
+          {data: 'id'},
+          {data: 'Areacode'},
+          {data: 'Postcode'},
+          {data: 'Mean_consumption'},
+          {data: 'Median_consumption'},
+          {data: 'Longitude'},
+          {data: 'Latitude'}
+        ],
+      });
+    });
+  </script>
+{% endblock %}
