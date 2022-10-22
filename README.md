@@ -41,14 +41,14 @@ The datasets are available to be downloaded at UK government website [here](http
   ![yamlareacodes](/Asset/yamlareacodes.JPG)
 
 * **Download and extract**
-* Download UK postcode level data:  
-  ```
-  curl -O https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1050244/Postcode_Level_Standard_Electricity_2020_A_to_K.csv
-  ```
-* Download UK geographic postcode data:
-  ```
-  https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=GeoPackage&redirect
-  ```
+  * Download UK postcode level data:  
+    ```
+    curl -O https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1050244/Postcode_Level_Standard_Electricity_2020_A_to_K.csv
+    ```
+  * Download UK geographic postcode data:
+    ```
+    https://api.os.uk/downloads/v1/products/CodePointOpen/downloads?area=GB&format=GeoPackage&redirect
+    ```
 
 
   
