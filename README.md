@@ -28,17 +28,17 @@ The datasets are available to be downloaded at UK government website [here](http
   pip3 install -r requirements.txt
   ```
 
+* **Download Database**
+  * Download sqlite database for API:  
+    ```
+    https://drive.google.com/file/d/1TD60eIu8pyFFAjPKVvDbJoo4ofHItJk3/view?usp=sharing
+    ```
+
 * **Set up .env and .yaml file**
   * Create .env and .yaml files:
 
   ![envsetup](/Asset/envsetup.JPG)
   ![yamlareacodes](/Asset/yamlareacodes.JPG)
-
-* **Download Database**
-* Download sqlite database for API:  
-  ```
-  https://drive.google.com/file/d/1TD60eIu8pyFFAjPKVvDbJoo4ofHItJk3/view?usp=sharing
-  ```
 
 * **Download and extract**
 * Download UK postcode level data:  
