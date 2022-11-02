@@ -6,6 +6,7 @@
 - [x] Create web API with Python and Flask.
 - [x] Visualize total anual electrcity consumption per postcode from areacode selection using Plotly.
 - [ ] Deploy API to server.
+- [ ] Establish a Machine Learning model to predict future elctricity consumption.
 
 ### API for Collected data from Gov UK and Ordinance Survey websites
 ![data_collection](/Asset/data_collection.gif)
